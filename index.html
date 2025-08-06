@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUGÝTO | www.youtube.com/@Gugyto</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: white;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 60%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    .countdown {
+      margin-top: 4px;
+      font-size: 1.05rem;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    #timer {
+      font-weight: bold;
+      animation: pulse 1s infinite;
+      display: inline-block;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (min-width: 1200px) {
+      img {
+        max-width: 900px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="files/Pivodaji.png" alt="Logo YouTube kanálu Gugýto">
+    <div class="countdown">
+      Tak za  <span id="timer">8</span>  na mém kanálu... ;o)
+    </div>
+  </div>
+
+  <script>
+    let seconds = 8;
+    const timer = document.getElementById('timer');
+
+    const interval = setInterval(() => {
+      seconds--;
+      if (seconds >= 0) {
+        timer.textContent = seconds;
+      }
+      if (seconds === 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.youtube.com/@Gugyto/";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUGÝTO | www.youtube.com/@Gugyto</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: white;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 60%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    .countdown {
+      margin-top: 4px;
+      font-size: 1.05rem;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    #timer {
+      font-weight: bold;
+      animation: pulse 1s infinite;
+      display: inline-block;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (min-width: 1200px) {
+      img {
+        max-width: 900px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="files/Pivodaji.png" alt="Logo YouTube kanálu Gugýto">
+    <div class="countdown">
+      Tak za  <span id="timer">8</span>  na mém kanálu... ;o)
+    </div>
+  </div>
+
+  <script>
+    let seconds = 8;
+    const timer = document.getElementById('timer');
+
+    const interval = setInterval(() => {
+      seconds--;
+      if (seconds >= 0) {
+        timer.textContent = seconds;
+      }
+      if (seconds === 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.youtube.com/@Gugyto/";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
