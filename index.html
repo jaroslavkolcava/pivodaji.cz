@@ -46,6 +46,8 @@
     #timer {
       font-weight: bold;
       animation: pulse 1s infinite;
+      display: inline-block; /* ← oprava pro funkční pulsování */
+      will-change: transform, opacity;
     }
 
     @keyframes slideUp {
