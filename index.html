@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PIVODAJI | YouTube kanál PIVODAJI</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       height: 100%;
       background-color: white;
       font-family: sans-serif;
-      color: #000;
+      color: black;
+      text-align: center;
+      overflow-x: hidden;
     }
 
     .wrapper {
-      height: 100%;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      overflow: hidden;
+      align-items: center;
+      padding: 20px;
+      gap: 40px; /* větší mezera mezi elementy */
     }
 
-    img, .countdown {
+    img, .social-icons, .countdown {
       opacity: 0;
-      transform: translateY(100px);
-      animation: slideUp 1.5s ease-out forwards;
+      transform: translateY(60px);
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
     }
 
     img {
       width: 45vw;
       max-width: 650px;
       height: auto;
+      animation-name: slideUp;
+      animation-duration: 1s;
       animation-delay: 0.2s;
     }
 
+    .social-icons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      animation-name: slideUp;
+      animation-duration: 1s;
+      animation-delay: 0.7s;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      border: 2px solid black;
+      border-radius: 50%;
+      transition: color 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      transition: stroke 0.3s ease, fill 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: inherit;
+      border-color: currentColor;
+    }
+
+    /* Barevné při hover */
+    a.youtube:hover {
+      color: #FF0000;
+      border-color: #FF0000;
+    }
+
+    a.facebook:hover {
+      color: #1877F2;
+      border-color: #1877F2;
+    }
+
+    a.instagram:hover {
+      color: #E1306C;
+      border-color: #E1306C;
+    }
+
+    a.tiktok:hover {
+      color: #69C9D0;
+      border-color: #69C9D0;
+    }
+
     .countdown {
-      margin-top: 60px;
       font-size: 1.3rem;
-      animation-delay: 1s;
+      margin-top: 10px; /* zachováno malý odsazení od ikon */
+      animation-name: slideUp;
+      animation-duration: 1s;
+      animation-delay: 1.2s;
     }
 
     #timer {
       font-weight: bold;
       animation: pulse 1s infinite;
-      display: inline-block; /* ← oprava pro funkční pulsování */
-      will-change: transform, opacity;
     }
 
     @keyframes slideUp {
@@ -65,11 +126,20 @@
 
     @media (max-width: 600px) {
       img {
-        width: 95vw;
+        width: 80vw;
       }
-
+      .social-icons {
+        gap: 20px;
+      }
+      .social-icons a {
+        width: 38px;
+        height: 38px;
+      }
+      .social-icons a svg {
+        width: 20px;
+        height: 20px;
+      }
       .countdown {
-        margin-top: 40px;
         font-size: 1.1rem;
       }
     }
@@ -77,14 +147,44 @@
 </head>
 <body>
   <div class="wrapper">
-    <img src="files/Pivodaji.png" alt="Logo YouTube kanálu PIVODAJI">
+    <img src="files/Pivodaji.png" alt="Logo YouTube kanálu PIVODAJI" />
+
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@PIVODAJI" target="_blank" aria-label="YouTube" class="youtube" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="20" height="14" rx="4" ry="4" stroke="currentColor" fill="none"/>
+          <polygon points="10 8 16 12 10 16" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+
+      <a href="https://www.facebook.com/jiri.pivoda" target="_blank" aria-label="Facebook" class="facebook" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" fill="none" stroke-width="2"/>
+        </svg>
+      </a>
+
+      <a href="https://www.instagram.com/pivodaji" target="_blank" aria-label="Instagram" class="instagram" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" fill="none" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" fill="none" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+
+      <a href="https://www.tiktok.com/@pivodaji" target="_blank" aria-label="TikTok" class="tiktok" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.963 2.17v12.42a4.05 4.05 0 11-4.05-4.05h3.04v3.615a7.05 7.05 0 117.05-7.05h-3.04z" stroke="currentColor" fill="none" stroke-width="2"/>
+        </svg>
+      </a>
+    </div>
+
     <div class="countdown">
-      Tak za <span id="timer">8</span> na mém YT kanále...;o)
+      Tak za <span id="timer">9</span> na mém YT kanálu... ;o)
     </div>
   </div>
 
   <script>
-    let seconds = 8;
+    let seconds = 9;
     const timer = document.getElementById('timer');
 
     const interval = setInterval(() => {
